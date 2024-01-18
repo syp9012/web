@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+</head>
+<body>
+	<h1>Form</h1>
+	<h3>formEx01.html</h3>  <!--  파일명은 외부에 공유하지마라. -->  <!-- 어디로 어떻게 무엇을 -->
+	<!-- <form id = "id명" action="서버측페이지"> -->
+	<!-- http://localhost:8081/pro1/test/ok.jsp?m_name=hong&m_nickname=별명
+									서버측페이지?파라미터명=값&parameter명=값
+		m_name=hong
+		m_name이라는 파라미터 안에 hong이라는 값이 저장됐다.							
+	-->
+	<!-- name의 값을 DBMS의 컬럼명과 맞춰주면 좋다.  
+	method를 기재하지않으면 default값은 get 이다.-->
+	
+	<form id="frm01" action="ok.html" method="get">
+	*이름:<input type="text" name="m_name"/><br/>
+	*별명:<input type="text" name="m_nickname" size="10"/><br/>
+	*비번:<input type="password" name="m_pwd" maxlength="10" /><br/>
+	*내용:<textarea rows="5" cols="100" name="content">default</textarea>
+	<input type="submit" value="확인"/>
+	<input type="reset" value="취소"/>
+	</form>
+
+</body>
+</html>

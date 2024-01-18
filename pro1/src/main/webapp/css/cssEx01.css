@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+/* 절대경로 (absolute path) : http://localhost:8081/pro1/test/cssEx01.css 
+	상대경로(relative path) cssEx01.css */
+
+
+hr{height:1px;width:100%;}
+#i1 {background-color:red;color:white} /* id명 unique */
+/* 레드그린블루	 숫자 0-9, a-f 색상 2개가 같으면 1개로 줄여써도된다.   */
+body{background-color:hotpink;} 
+/* div영역의 글자 모양 : 궁서체  */
+.c1 {font-family:궁서체;}
+/* 공백이 들어가있으면 더블쿼테이션으로 묶어라. */
+span.c1 {font-family:"Script";}
