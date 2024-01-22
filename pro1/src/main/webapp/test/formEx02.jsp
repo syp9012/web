@@ -135,7 +135,7 @@
 			
 			//let frmObj=window.document.querySelectorAll("body table"); //object NodeList
 			/* 자바스크립트 document 객체의 querySelectorAll("css선택자") 
-			: css선택자를 사용하여 해당하는 모든 요소를 반환ㄴ
+			: css선택자를 사용하여 해당하는 모든 요소를 반환
 			: css선택자에 해당하는 요소가 없으면 빈(empty) NodeList를 반환
 			 */
 			
