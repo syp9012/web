@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열</title>
+</head>
+<body>
+<script>
+	// 배열 : 동일한 자료형의 데이터를 입력하기 위한 정적인 자료구조 
+	
+	// 방법1. 
+	var a1 = new Array();
+	a1[0] = 80;
+	a1[1] = 90;
+	a1[2] = 70;
+	
+	for(var i=0; i<a1.length; i++){
+		document.write(a1[i]+"\t");
+	}
+	document.write("<br>");
+	
+	// 방법2.
+	var a2 = new Array(80,90,70);
+	for(var i=0; i<a2.length; i++){
+		document.write(a2[i]+"\t");
+	}
+	document.write("<br>");
+	
+	// 방식3.
+	var a3=[80,90,70];
+	for(var i=0; i<a3.length; i++){
+		document.write(a3[i]+"\t");
+	}
+	document.write("<br>");
+</script>
+</body>
+</html>

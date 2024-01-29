@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calculator</title>
+<style>
+.btn1 {text-align:center; width:40px;}
+.btn2 {text-align:center; width:85px;}
+</style>
+<script>
+	var result="";
+	
+	function updateResult(){
+		document.getElementById("data").value = result;
+	}
+	
+	function one(){
+		result+="1";
+		updateResult();
+	}
+	function two(){
+		result+="2";
+		updateResult();
+	}
+	function three(){
+		result+="3";
+		updateResult();
+	}
+	function four(){
+		result+="4";
+		updateResult();
+	}
+	function five(){
+		result+="5";
+		updateResult();
+	}
+	function six(){
+		result+="6";
+		updateResult();
+	}
+	function seven(){
+		result+="7";
+		updateResult();
+	}
+	function eight(){
+		result+="8";
+		updateResult();
+	}
+	function nine(){
+		result+="9";
+		updateResult();
+	}
+	function zero(){
+		result+="0";
+		updateResult();
+	}
+	function plus(){
+		result+="+";
+		updateResult();
+	}
+	function minus(){
+		result+="-";
+		updateResult();
+	}
+	function multi(){
+		result+="*"
+			updateResult();
+	} 
+	function divide(){
+		result+="/"
+		updateResult();
+	}
+	function sqrt(){
+		result=Math.sqrt(result);
+		updateResult();
+	}
+	function result1(){
+		result=eval(result);
+		updateResult();
+	}
+	function reset(){
+		result="";
+		updateResult();
+	}
+
+</script>
+</head>
+<body>
+<table border="1" >
+<tr>
+	<td colspan="4"><input type="text" id="data" value="" size="20"></td>
+</tr>
+<tr>
+	<td><input type="button" class = btn1 id="7" value="7" onClick="seven()"></td>
+	<td><input type="button" class = btn1 id="8" value="8" onClick="eight()"></td>
+	<td><input type="button" class = btn1 id="9" value="9" onClick="nine()"></td>
+	<td><input type="button" class = btn1 id="slash" value="/" onClick="divide()"></td>
+</tr>
+<tr>
+	<td><input type="button" class = btn1 id="4" value="4" onClick="four()"></td>
+	<td><input type="button" class = btn1 id="5" value="5" onClick="five()"></td>
+	<td><input type="button" class = btn1 id="6" value="6" onClick="six()"></td>
+	<td><input type="button" class = btn1 id="multi" value="*" onClick="multi()"></td>
+</tr>
+<tr>
+	<td><input type="button" class = btn1 id="1" value="1" onClick="one()"></td>
+	<td><input type="button" class = btn1 id="2" value="2" onClick="two()"></td>
+	<td><input type="button" class = btn1 id="3" value="3" onClick="three()"></td>
+	<td><input type="button" class = btn1 id="minus" value="-" onClick="minus()"></td>
+</tr>
+<tr>
+	<td><input type="button" class = btn1 id="0" value="0"  onClick="zero()"></td>
+	<td><input type="button" class = btn1 id="dot" value="."  onClick="dot()"></td>
+	<td><input type="button" class = btn1 id="sqrt" value="sqrt" onClick="sqrt()"></td>
+	<td><input type="button" class = btn1 id="plus" value="plus" onClick="plus()"></td>
+</tr>
+<tr>
+	<td colspan="2"><input class = btn2 type="button" id="result" value="="  onClick="result1()"></td>
+	<td colspan="2"><input class = btn2 type="button" id="clear" value="clear"  onClick="reset()"></td>
+</tr>
+
+
+
+</table>
+</body>
+</html>

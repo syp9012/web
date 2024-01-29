@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>lotto</title>
+</head>
+<body>
+<script>
+var a = new Array();
+
+for(var i = 0; i<6; i++){
+	a[i] = parseInt(Math.random()*45) + 1;
+ 	for(var j = 0; j > i; j++){
+		if(a[j]==a[i]){
+			--i;
+			break;
+		}
+	}
+}
+
+document.write(a.sort());
+</script>
+</body>
+</html>

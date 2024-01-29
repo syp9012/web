@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>for문</title>
+</head>
+<body>
+<script>
+	//키보드로 원하는 단을 입력 받아서 구구단 1개단을 출력해라.
+	var dan = Number(prompt("원하는 단을 입력하세요?",""));
+	if(dan==0){
+		alert("입력된 데이터가 없습니다. 값을 입력해주세요.");
+	}
+	
+	for(var i=1;i<=9;i++){
+		document.write(dan+"*"+i+"="+dan*i+"<br>");
+	}
+
+</script>
+</body>
+</html>
