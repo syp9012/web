@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>주민등록번호 유효성 검사</title>
+<script>
+	function check(){
+		var jumin1 = document.getElementById("jumin1");
+		var jumin2 = document.getElementById("jumin2");
+		var juminArray = new Array();
+		var a = [2,3,4,5,6,7,8,9,2,3,4,5]
+		var sum = 0;
+		var rest= 0;
+		
+		for(var i =0; i<6; i++){
+			juminArray[i] = Number(jumin1.value.substr(i,1));
+		}
+		for(var i=6; i<13; i++){
+			juminArray[i] = Number(jumin2.value.substr(i-6,1));
+		}
+		for(var i =0; i<12; i++){
+			sum+=juminArray[i]*a[i];
+		}
+		rest=Number(sum%11);
+		if(rest==10){
+			rest=0;
+		}
+		if(rest==juminArray[12]){
+			alert(sum+","+rest+"위 주민번호는 올바른 주민번호 입니다.")
+			return false;
+		} else{
+			alert(sum+","+rest+"위 주민번호는 틀린 주민번호 입니다.")
+			jumin1.value="";
+			jumin2.value="";
+			jumin1.focus();
+			return false;
+		}
+	}
+	function move(){
+		var jumin1 = document.getElementById("jumin1");
+		var jumin2 = document.getElementById("jumin2");
+		
+		if(jumin1.value.length==6){
+			jumin2.focus();
+			return false;
+		}
+	}
+
+</script>
+</head>
+<body>
+<form onSubmit="check()">
+	주민번호<input type="text" id="jumin1" size="6" maxlength="6" onKeyup="move()">-
+	<input type="text" id="jumin2" size="7" maxlength="7">
+	<input type="submit" value="검사">
+	<input type="reset" value="취소">
+</form>
+</body>
+</html>
