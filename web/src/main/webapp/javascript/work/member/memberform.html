@@ -3,97 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 폼</title>
-</head>
 <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
-	function openDaumPostcode() {
-		new daum.Postcode({
-			oncomplete: function (data) {
-				document.getElementById('post').value = data.zonecode;
-				document.getElementById('address').value = data.address;
-			}
-		}).open();
-	}
+function openDaumPostcode() {
+	new daum.Postcode({
+		oncomplete: function (data) {
+			document.getElementById('post').value = data.zonecode;
+			document.getElementById('address').value = data.address;
+		}
+	}).open();
+}
 </script>
-<script>
-	//ID 중복검사
-	function idcheck(){
-		var id = document.getElementById("id");
-		if(id.value==""){
-			alert("아이디를 입력하세요.")
-			id.focus();
-			return false;
-		} else{
-			var ref = "idcheck.jsp?id="+id.value;
-			//open("팝업창에 실행될 문서명","윈도우이름","옵션");
-			window.open(ref,"idcheck","width=300,height=200");
-		}
-	}
-	
-	//주민번호 뒷자리로 포커스 이동
-	function move(){
-		var jumin1=document.getElementById("jumin1");
-		var jumin2=document.getElementById("jumin2");
-		
-		//주민번호 앞자리 6자리를 입력 했을때
-		if(jumin1.value.length==6){
-			jumin2.focus();
-		}
-	}
-	
-	// 도메인 선택
-	function sel(){
-		var domain = document.getElementById("domain")
-		var email =  document.getElementById("email")
-
-		if(email.value==""){		//'직접입력'을 선택한 경우
-			domain.readOnly=false;	//읽기전용 옵션 해제
-			domain.value="";
-			domain.focus();
-		}else{						//'도메인명'을 선택한 경우
-			domain.value=email.value;
-			domain.readOnly=true;	//읽기만 가능  > readOnly 대문자로 기재할것.
-		}
-	}
-	// 유효성 검사
-	function check(){
-		var id = document.getElementById("id");
-		var passwd = document.getElementById("passwd");
-		var name = document.getElementById("name");
-		var jumin1 = document.getElementById("jumin1");
-		var jumin2 = document.getElementById("jumin2");
-		var mailid = document.getElementById("mailid");
-		var domain = document.getElementById("domain");
-		var tel1 = document.getElementById("tel1");
-		var tel2 = document.getElementById("tel2");
-		var tel3 = document.getElementById("tel3");
-		var phone1 = document.getElementById("phone1");
-		var phone2 = document.getElementById("phone2");
-		var phone3 = document.getElementById("phone3");
-		var post = document.getElementById("post");
-		var address = document.getElementById("address");
-		var male = document.getElementById("male");
-		var female = document.getElementById("female");
-		var h1 = document.getElementById("h1");
-		var h2 = document.getElementById("h2");
-		var h3 = document.getElementById("h3");
-		var h4 = document.getElementById("h4");
-		var h5 = document.getElementById("h5");
-		var intro = document.getElementById("intro");
-		
-		if(id.value==""){
-			alert("ID를 입력 하세요.");
-			id.focus();
-			return false;
-		}
-		
-		
-		
-	}
-	
-	
-	
-</script>
+<!-- 외부 자바스크립트 파일 불러오기 -->
+<script src="member.js"></script>
+</head>
 <body>
 	
 <form method="post" action="member.jsp" onSubmit="return check()">

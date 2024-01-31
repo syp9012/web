@@ -11,6 +11,7 @@
 		var a = [2,3,4,5,6,7,8,9,2,3,4,5]
 		var sum = 0;
 		var rest= 0;
+		var rest2;
 		
 		for(var i =0; i<6; i++){
 			juminArray[i] = Number(jumin1.value.substr(i,1));
@@ -22,14 +23,15 @@
 			sum+=juminArray[i]*a[i];
 		}
 		rest=Number(sum%11);
-		if(rest==10){
-			rest=0;
+		rest2=11-rest;
+		if(rest2==10){
+			rest2=0;
 		}
-		if(rest==juminArray[12]){
-			alert(sum+","+rest+"위 주민번호는 올바른 주민번호 입니다.")
+		if(rest2==juminArray[12]){
+			alert("위 주민번호는 올바른 주민번호 입니다.")
 			return false;
 		} else{
-			alert(sum+","+rest+"위 주민번호는 틀린 주민번호 입니다.")
+			alert("위 주민번호는 틀린 주민번호 입니다.")
 			jumin1.value="";
 			jumin2.value="";
 			jumin1.focus();
