@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>select 객체</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){
+		$("select").change(function(){
+			if($("select").val() == 10){		//10대 선택
+				$("input").attr("readonly",true);	//읽기전용 설정
+			}else{								// 나머지 연령대 선택
+// 				$("input").attr("readonly",false);	//읽기전용 해제
+				$("input").removeAttr("readonly");
+				$("input").val("").focus();
+			}
+		});
+	});
+</script>
+</head>
+<body>
+나이 : <select>
+		<option value="">나이선택</option>
+		<option value="10">10대</option>
+		<option value="20">20대</option>
+		<option value="30">30대</option>
+		<option value="40">40대 이상</option>
+	</select><br><br>
+	좋아하는 숫자 : <input type="text">
+</body>
+</html>

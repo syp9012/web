@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(function(){
+		$("#myform").submit(function(){
+			if($("#name").val()==""){
+				alert("이름을 입력하세요");
+				$("#name").focus();
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+<form id="myform" method="post" action="send.jsp">
+	이름:<input type="text" size="20" name="name" id="name"><br><br>
+	<input type="submit" value="전송" id="sub">
+</form>
+</body>
+</html>

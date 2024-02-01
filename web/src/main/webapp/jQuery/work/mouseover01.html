@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mouseover 이벤트</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		$("img").mouseover(function(){  // mouseover 이벤트
+			$(this).attr("src","sea.jpg").attr("title","바다");
+			$("body").css("background","yellow");
+		})/* ;
+		$("img") */.mouseout(function(){   // mouseout 이벤트
+			$(this).attr("src","flower.jpg").attr("title","꽃");
+			$("body").css("background","green");
+		});
+	});	
+</script>
+</head>
+<body>
+	<img src="flower.jpg" title="꽃">
+</body>
+</html>
+
