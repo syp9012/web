@@ -10,6 +10,9 @@
 <script>
 $(function(){
 	$.getJSON('item.json', function(data, textStatus){
+//		alert(data);
+//		alert(textStatus);
+		
 		$('#treeData').append(
 			"<tr><td>id</td><td>name</td>" + 
 			"    <td>price</td><td>description</td></tr>");
