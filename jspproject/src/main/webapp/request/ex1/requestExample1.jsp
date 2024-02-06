@@ -8,7 +8,7 @@
 	//	시켜주지 않기 때문에 아래의 코드로 직접 인코딩을 시켜야 한다.
 
 	// 폼파일에서 한글값이 post방식으로 전송될때 utf-8로 인코딩을 시켜주는 역할
-//	request.setCharacterEncoding("utf-8");
+ 	request.setCharacterEncoding("utf-8"); 
 %>
 
 <html>

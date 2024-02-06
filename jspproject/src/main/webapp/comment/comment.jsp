@@ -22,4 +22,4 @@ out.println("i+j = " + i); //계산된 결과를 출력합니다.
 %>
 
 </body>
-</html>   
+</html>
