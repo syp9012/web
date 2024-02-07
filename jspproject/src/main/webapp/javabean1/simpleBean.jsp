@@ -24,6 +24,7 @@
 	<h1>간단한 자바빈 프로그래밍</h1>
 	<br>
 <!-- 자바빈 클래스의 getter 메소드를 호출해서 리턴된 필드(프로퍼티)를 웹브라우저에 출력해주는 역할 -->
+<!-- 주로 sb.getName() 호출하는 방법을 주로 쓴다. -->
 	이름 : <jsp:getProperty property="name" name="sb"/><br>
 	이름 : <%=sb.getName() %><br>
 	메시지 : <jsp:getProperty name="sb" property="msg" /><br>
