@@ -9,6 +9,12 @@
 <body>
 
 회원관리 프로그램
+<script>
+	location.href="member/loginform.html";
+</script>
+
+
+
 
 </body>
 </html>

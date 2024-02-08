@@ -1,18 +1,49 @@
 $(document).ready(function(){
 		
-		// ID중복검사
+//		// ID중복검사
+//		$("#idcheck").click(function(){
+//			if($("#id").val()==""){
+//				alert("ID를 입력하세요.");
+//				$("#id").focus();
+//				return false;
+//			}else{
+//				// open("팝업창에 실행될 문서명","윈도우이름","옵션")
+//				var ref="idcheck.jsp?id="+$("#id").val();
+//				window.open(ref,"mywin","width=250,height=150");
+//			}			
+//		});
+
+		// ajax로 id중복 검사
 		$("#idcheck").click(function(){
-			if($("#id").val()==""){
-				alert("ID를 입력하세요.");
+			if($("#id").val() == ""){
+				alert("ID를 입력 하세요.");
 				$("#id").focus();
 				return false;
 			}else{
-				// open("팝업창에 실행될 문서명","윈도우이름","옵션")
-				var ref="idcheck.jsp?id="+$("#id").val();
-				window.open(ref,"mywin","width=250,height=150");
-			}			
+				
+				var id = $("#id").val();  //사용자가 입력한 id
+				
+				$.ajax({
+					type : "post",		  // get, post, put, delete
+					url : "idcheck1.jsp", // 요청할 파일의 url주소
+					data : {"id" : id},   // json 
+					success : function(result){ // 콜백함수
+						                        //:결과를 돌려 받았을때만 실행된다.
+						alert(result);
+						if(result == 1){     // 중복 ID
+							$("#myid").html("<font color=red>중복ID</font>");
+							$("#id").val("").focus();
+						}else{				 // 사용 가능한 ID						
+							$("#myid").html("<font color=blue>사용가능한ID</font>");
+							$("#passwd").focus();
+						}
+					}
+					
+				}); // $.ajax() end
+			}		
+			
 		});
-		
+	
 		// 주민번호  뒷자리로 포커스 이동
 		$("#jumin1").keyup(function(){
 			
