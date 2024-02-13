@@ -14,5 +14,7 @@
 	//result : -1(사용가능한 id)
 
 	// 웹브라우저에 출력되는 값이 callback 함수로 리턴된다.
+	
+
 	out.println(result);
 %>
